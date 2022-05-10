@@ -73,6 +73,7 @@ public class Glossary {
     public static void headerCreate() throws IOException {
         String out = "===================Final Exam===================";
         out = out + "\n============Made by Pavlo Kandieiev=============";
+        out = out + "\n=============I write this Java code=============";
         out = out + "\n++++++++++++++++++++++++++++++++++++++++++++++++";
         out = out + "\n                Thx for watching                \n\n\n";
         Files.write(Paths.get(pathOut), out.getBytes(StandardCharsets.UTF_8));
