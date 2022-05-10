@@ -7,7 +7,6 @@ import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 import java.util.*;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class Glossary {
     private static final String pathOut = "D:/Лабораторные/Slovak/SlovakeFinalTest/test.txt";
@@ -19,7 +18,7 @@ public class Glossary {
         Map<String, Integer> map = getMap(words);
         Map<String, Integer> sortedMap = sortMap(map, map.size());
         System.out.println(sortedMap);
-        writeToreadyFile(sortMap(map, 20).toString()+"\n");
+        writeToReadyFile(sortMap(map, 20).toString()+"\n");
 
         List<String> proper = new ArrayList<>();
         for (String element: map.keySet()) {
@@ -31,8 +30,8 @@ public class Glossary {
             }
         }
         Collections.sort(proper);
-        writeToreadyFile("We have: "+Integer.toString(proper.size()) + " names.\n");
-        writeToreadyFile(proper.toString()+"\n");
+        writeToReadyFile("We have: "+Integer.toString(proper.size()) + " names.\n");
+        writeToReadyFile(proper.toString()+"\n");
 
 
 
@@ -78,7 +77,7 @@ public class Glossary {
         out = out + "\n                Thx for watching                \n\n\n";
         Files.write(Paths.get(pathOut), out.getBytes(StandardCharsets.UTF_8));
     }
-    public static void writeToreadyFile(String out) throws IOException {
+    public static void writeToReadyFile(String out) throws IOException {
         Files.write(Paths.get(pathOut), out.getBytes(StandardCharsets.UTF_8), StandardOpenOption.APPEND);
     }
 
